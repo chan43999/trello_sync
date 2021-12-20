@@ -25,3 +25,10 @@ jobs:
           registry: docker.io/chan43999
           username: chan43999
           password: ${{ secrets.REGISTRY_PASSWORD }}
+  update_image:
+    name: Update Image Tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: update tag
+        run: |
+          yq
