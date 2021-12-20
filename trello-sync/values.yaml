@@ -6,13 +6,12 @@ image:
   repository: chan43999
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "c875928808b334b85ceb7897977c25735f04f5b4"
+  tag: "818d13ce2d3c9537ac966304563467116ddc143b"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 serviceAccount:
   create: true
-
 podAnnotations: {}
 podSecurityContext: {}
 # fsGroup: 2000
