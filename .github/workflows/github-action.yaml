@@ -30,4 +30,5 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: update tag
         run: |
-          yq  -i eval '.image.tag = "${{ steps.build-image.outputs.tags }}"' values.yaml
+          yq  -i eval '.image.tag = "${{ steps.build-image.outputs.tags }}"' trello-sync/values.yaml
+      - uses: EndBug/add-and-commit@v7
