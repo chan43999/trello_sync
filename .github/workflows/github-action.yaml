@@ -32,8 +32,5 @@ jobs:
         run: |
           yq  -i eval '.image.tag = "${{ steps.build-image.outputs.tags }}"' trello-sync/values.yaml
       - uses: EndBug/add-and-commit@v7
-      - name: Push changes
-        uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          add: 'trello-sync/values.yaml'
